@@ -1,0 +1,99 @@
+@import 'fonts';
+@import 'reset';
+*{
+	font-family: 'Helvetica';
+}
+.header{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 40px;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	&__logo{
+		text-decoration: none;
+		vertical-align: middle;
+		font-size: 45px;
+		color: #fff;
+	}
+	&__link{
+		text-decoration: none;
+		color: #fff;
+		padding: 0 10px;
+		position: relative;
+		transition: all .3s;
+		&:after{
+			content:"";
+			display: block;
+			position: absolute;
+			bottom:-5px;
+			left: 0;
+			height: 3px;
+			width: 100%;
+			background-color: #c4c4c4;
+			transition: all .3s;
+			transform: scale(0);
+		}
+		&:hover{
+			color: #c4c4c4;
+			&:after{
+				transform: scale(1);
+			}
+		}
+	}
+}
+.hero{
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background-image: url(../img/hero.jpg);
+	background-size: cover;
+	&__wrapper{
+		background-image: url(../img/point.png);
+		background-color: rgba(0,0,0,.3);
+		width: 100%;
+		height: 100%;
+	}
+	&__block{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		text-align: center;
+	}
+	&__title{
+		color: #fff;
+		letter-spacing: 0.8vw;
+		font-size: 8vw;
+		position: relative;
+		&:before{
+			content:'';
+			display: block;
+			background-color: #fff;
+			height: .7vh;
+			width: 12vw;
+			left: -5%;
+			top: 8%;
+			position: absolute;
+		}
+	}
+	&__text{
+		color: #fff;
+		font-size: 1.8vw;
+		letter-spacing: .9vw;
+		position: relative;
+		&:before{
+			content:'';
+			display: block;
+			background-color: #fff;
+			height: .7vh;
+			width: 12vw;
+			left: -5%;
+			bottom: -40%;
+			position: absolute;
+		}
+	}
+}
